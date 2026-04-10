@@ -22,7 +22,7 @@ class RegexToNFA:
         self.regex = regex.replace(" ", "")
         self.states = []
 
-    # -------- Tokenizing --------
+    
     def tokenize(self):
         tokens = []
         i = 0
@@ -42,7 +42,7 @@ class RegexToNFA:
 
         return tokens
 
-    # -------- Parsing --------
+    
     def parse(self):
         self.tokens = self.tokenize()
         self.pos = 0
@@ -88,7 +88,7 @@ class RegexToNFA:
             return node
         return ('char', self.eat('char')[1])
 
-    # -------- NFA --------
+    #NFA Build 
     def new_state(self):
         s = State()
         self.states.append(s)
@@ -152,7 +152,7 @@ class RegexToNFA:
 
             return s, e
 
-    # -------- Convert --------
+    # Convert
     def convert(self):
         tree = self.parse()
         start, end = self.build(tree)
@@ -184,7 +184,7 @@ class RegexToNFA:
 
         return res
 
-    # -------- Print --------
+    
     def table(self, states):
         print("\nState | Input | Next")
         print("----------------------")
@@ -201,7 +201,7 @@ class RegexToNFA:
         print("Final:",
               [f"q{s.vis}" for s in states if s.final])
 
-    # -------- Graph --------
+    # Visualization 
     def draw(self, states):
         dot = graphviz.Digraph(format='png')
 
@@ -220,7 +220,7 @@ class RegexToNFA:
         dot.render("nfa_graph", view=True)
 
 
-# -------- MAIN --------
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         r = sys.argv[1]
