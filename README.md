@@ -8,10 +8,10 @@ It supports parsing a regex expression, building an NFA, displaying its transiti
 ---
 
 ## 👥 Team Members
-- Salma Zakaria — 231001369  
-- Tasneem Elsharkawy — 231001398  
-- Amr Ahmed — 231000719  
-- Rodina Ahmed — 231002758  
+- Salma Zakaria 
+- Tasneem Elsharkawy 
+- Amr Ahmed 
+- Rodina Ahmed 
 
 ---
 
